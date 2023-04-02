@@ -13,11 +13,8 @@ const db = knex({
   client: 'pg',
   version: '5.7',
   connection: {
-    host: 'https://smart--brain-app.herokuapp.com/',
-    port: process.env.PORT,
-    user: 'postgres',
-    password: 'Pouncer!8675',
-    dahtabase: 'smartbrain',
+    host: process.env.DATABASE_URL,
+    ssl: true,
   },
 });
 
