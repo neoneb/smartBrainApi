@@ -9,23 +9,23 @@ const signin = require('./controllers/signin.js');
 const profile = require('./controllers/profile.js');
 const image = require('./controllers/image.js');
 
-const db = knex({
-  client: 'pg',
-  version: '5.7',
-  connection: {
-    host: '127.0.0.1',
-    port: 5432,
-    user: 'postgres',
-    password: 'Pouncer!8675',
-    database: 'smartbrain',
-  },
-});
+// const db = knex({
+//   client: 'pg',
+//   version: '5.7',
+//   connection: {
+//     host: '127.0.0.1',
+//     port: 5432,
+//     user: 'postgres',
+//     password: 'Pouncer!8675',
+//     database: 'smartbrain',
+//   },
+// });
 
-db.select('*')
-  .from('users')
-  .then((data) => {
-    console.log(data);
-  });
+// db.select('*')
+//   .from('users')
+//   .then((data) => {
+//     console.log(data);
+//   });
 
 const app = express();
 
