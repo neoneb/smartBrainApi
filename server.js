@@ -29,7 +29,11 @@ db.select('*')
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.PORT,
+  })
+);
 
 app.get('/', (req, res) => {
   res.send(db.users);
